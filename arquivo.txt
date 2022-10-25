@@ -1,0 +1,80 @@
+programa
+{
+	inclua biblioteca Util
+	
+	inteiro quantidade = 0
+	real valor = 0.0, dinheiro = 0.0
+	caracter escolhe
+		
+	funcao inicio()
+	{
+		inteiro opcao = 0
+		escreva("=============================\n")
+		escreva("  Bem vindo à lanchonete \n")
+		escreva("        da esquina!\n")
+		escreva("=============================\n")
+		Util.aguarde(1000)
+		limpa()
+		menu(opcao)
+		}
+		
+		funcao menu(inteiro opcao){
+		escreva("==========================================\n")
+		escreva("                   MENU:                  \n")
+		escreva("------------------------------------------\n")
+		escreva("1– X-Salada: 1,20  \n")
+		escreva("2– X-Bacon: 1,30  \n")
+		escreva("3– X-Egg: 1,50  \n")
+		escreva("4– Refrigerante: 1,20  \n")
+		escreva("5 – Finalizar pedido \n")
+		escreva("==========================================\n")
+		escreva("Escolha o código sua opcão: ")
+		leia(opcao)
+		para (opcao > 1 ou opcao < 5){
+	
+		escolha(opcao){
+
+			caso 1: 
+				limpa()
+				dinheiro =  1.2
+				
+			pare
+			
+			caso 2:
+				limpa()
+				dinheiro = 1.3
+			pare
+			
+			caso 3:
+				limpa()
+				dinheiro = 1.5
+				
+			pare
+			
+			caso 4:
+				limpa()
+				dinheiro = 1.2
+				
+			pare
+
+			caso 5:
+				limpa()
+        escreva("O preço será de R$:", valor," \nmuito obrigado e volte sempre!!!")
+			pare
+
+      escreva("Quantos irá querer? ")
+		leia(quantidade)
+		valor = valor + dinheiro * quantidade
+		escreva("Deseja mais algo? S/N ")
+		leia(escolhe)
+		se(escolhe == 's'){
+			limpa()
+			menu(opcao)
+		}
+			limpa()
+		 	escreva("O preço será de R$:", valor," \nmuito obrigado e volte sempre!!!")
+				}
+		
+		}
+	
+}
